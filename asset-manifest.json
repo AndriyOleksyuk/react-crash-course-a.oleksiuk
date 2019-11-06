@@ -1,24 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.34de6062.chunk.css",
-    "main.js": "/static/js/main.fce5ea1e.chunk.js",
-    "main.js.map": "/static/js/main.fce5ea1e.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.6a0e396a.js",
-    "runtime-main.js.map": "/static/js/runtime-main.6a0e396a.js.map",
-    "static/css/2.510409cd.chunk.css": "/static/css/2.510409cd.chunk.css",
-    "static/js/2.171b487c.chunk.js": "/static/js/2.171b487c.chunk.js",
-    "static/js/2.171b487c.chunk.js.map": "/static/js/2.171b487c.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.e560a6dc0792add5e6f5a07f3bb52776.js": "/precache-manifest.e560a6dc0792add5e6f5a07f3bb52776.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.510409cd.chunk.css.map": "/static/css/2.510409cd.chunk.css.map",
-    "static/css/main.34de6062.chunk.css.map": "/static/css/main.34de6062.chunk.css.map"
+    "main.css": "/react-crash-course-a.oleksiuk/static/css/main.b100e6da.chunk.css",
+    "main.js": "/react-crash-course-a.oleksiuk/static/js/main.2a6ad130.chunk.js",
+    "main.js.map": "/react-crash-course-a.oleksiuk/static/js/main.2a6ad130.chunk.js.map",
+    "runtime-main.js": "/react-crash-course-a.oleksiuk/static/js/runtime-main.ae7bbe40.js",
+    "runtime-main.js.map": "/react-crash-course-a.oleksiuk/static/js/runtime-main.ae7bbe40.js.map",
+    "static/js/2.6152f179.chunk.js": "/react-crash-course-a.oleksiuk/static/js/2.6152f179.chunk.js",
+    "static/js/2.6152f179.chunk.js.map": "/react-crash-course-a.oleksiuk/static/js/2.6152f179.chunk.js.map",
+    "index.html": "/react-crash-course-a.oleksiuk/index.html",
+    "precache-manifest.988f7b9c396044e07cf32f24f3727c00.js": "/react-crash-course-a.oleksiuk/precache-manifest.988f7b9c396044e07cf32f24f3727c00.js",
+    "service-worker.js": "/react-crash-course-a.oleksiuk/service-worker.js",
+    "static/css/main.b100e6da.chunk.css.map": "/react-crash-course-a.oleksiuk/static/css/main.b100e6da.chunk.css.map",
+    "static/media/logo.svg": "/react-crash-course-a.oleksiuk/static/media/logo.25bf045c.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.6a0e396a.js",
-    "static/css/2.510409cd.chunk.css",
-    "static/js/2.171b487c.chunk.js",
-    "static/css/main.34de6062.chunk.css",
-    "static/js/main.fce5ea1e.chunk.js"
+    "static/js/runtime-main.ae7bbe40.js",
+    "static/js/2.6152f179.chunk.js",
+    "static/css/main.b100e6da.chunk.css",
+    "static/js/main.2a6ad130.chunk.js"
   ]
 }
