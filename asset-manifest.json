@@ -1,24 +1,26 @@
 {
   "files": {
     "main.css": "/react-crash-course-a.oleksiuk/static/css/main.498d002a.chunk.css",
-    "main.js": "/react-crash-course-a.oleksiuk/static/js/main.bce70958.chunk.js",
-    "main.js.map": "/react-crash-course-a.oleksiuk/static/js/main.bce70958.chunk.js.map",
-    "runtime-main.js": "/react-crash-course-a.oleksiuk/static/js/runtime-main.ae7bbe40.js",
-    "runtime-main.js.map": "/react-crash-course-a.oleksiuk/static/js/runtime-main.ae7bbe40.js.map",
+    "main.js": "/react-crash-course-a.oleksiuk/static/js/main.f4af1a67.chunk.js",
+    "main.js.map": "/react-crash-course-a.oleksiuk/static/js/main.f4af1a67.chunk.js.map",
+    "runtime-main.js": "/react-crash-course-a.oleksiuk/static/js/runtime-main.1ef255cd.js",
+    "runtime-main.js.map": "/react-crash-course-a.oleksiuk/static/js/runtime-main.1ef255cd.js.map",
     "static/css/2.510409cd.chunk.css": "/react-crash-course-a.oleksiuk/static/css/2.510409cd.chunk.css",
-    "static/js/2.171b487c.chunk.js": "/react-crash-course-a.oleksiuk/static/js/2.171b487c.chunk.js",
-    "static/js/2.171b487c.chunk.js.map": "/react-crash-course-a.oleksiuk/static/js/2.171b487c.chunk.js.map",
+    "static/js/2.d6d99202.chunk.js": "/react-crash-course-a.oleksiuk/static/js/2.d6d99202.chunk.js",
+    "static/js/2.d6d99202.chunk.js.map": "/react-crash-course-a.oleksiuk/static/js/2.d6d99202.chunk.js.map",
+    "static/js/3.412a6c98.chunk.js": "/react-crash-course-a.oleksiuk/static/js/3.412a6c98.chunk.js",
+    "static/js/3.412a6c98.chunk.js.map": "/react-crash-course-a.oleksiuk/static/js/3.412a6c98.chunk.js.map",
     "index.html": "/react-crash-course-a.oleksiuk/index.html",
-    "precache-manifest.448ca4f0a61017aa6035b6bb193bbb8a.js": "/react-crash-course-a.oleksiuk/precache-manifest.448ca4f0a61017aa6035b6bb193bbb8a.js",
+    "precache-manifest.d90cbdfd9da723a65b59e7d11ed04051.js": "/react-crash-course-a.oleksiuk/precache-manifest.d90cbdfd9da723a65b59e7d11ed04051.js",
     "service-worker.js": "/react-crash-course-a.oleksiuk/service-worker.js",
     "static/css/2.510409cd.chunk.css.map": "/react-crash-course-a.oleksiuk/static/css/2.510409cd.chunk.css.map",
     "static/css/main.498d002a.chunk.css.map": "/react-crash-course-a.oleksiuk/static/css/main.498d002a.chunk.css.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.ae7bbe40.js",
+    "static/js/runtime-main.1ef255cd.js",
     "static/css/2.510409cd.chunk.css",
-    "static/js/2.171b487c.chunk.js",
+    "static/js/2.d6d99202.chunk.js",
     "static/css/main.498d002a.chunk.css",
-    "static/js/main.bce70958.chunk.js"
+    "static/js/main.f4af1a67.chunk.js"
   ]
 }
