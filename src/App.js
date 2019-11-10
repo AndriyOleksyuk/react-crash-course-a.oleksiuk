@@ -1,85 +1,71 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
-import ModalWindow from './ModalWindow';
-import MainContainer from './MainContainer';
+import ModalWindow from './containers/ModalWindow';
+import MainContainer from './containers/MainContainer';
+import Response from './components/Response';
+import { Alert, Container } from 'react-bootstrap';
 
-const CancelToken = axios.CancelToken;
 const URL = 'https://randomuser.me/api/';
+const CancelToken = axios.CancelToken;
+let source = CancelToken.source();
 
-export class App extends Component {
-    state = {
-        isRequestSended: false,
-        error: '',
-        data: {}
-    }
-
-    source = CancelToken.source();
-
-    getUser = () => {
-        var that = this;
-        that.setState({
-            error: '',
-            data: {},
-            isRequestSended: true
-        });
+const App = props => {
+    const [responseError, setResponseError] = useState('');
+    const [isRequestSended, setIsRequestSended] = useState(false);
+    const [serviceData, setServiceData] = useState({});
+    
+    const getUser = () => {
+        setResponseError('');
+        setIsRequestSended(true);
+        setServiceData({});
 
         axios.get(URL, {
-            cancelToken: that.source.token
+            cancelToken: source.token
         })
-            .then(res => res.data)
-            .then(function (data) {
-                var userInfo = data.results[0];
-                that.setState({
-                    data: {
-                        email: userInfo.email
-                    }
-                })
-            }).catch(function (thrown) {
-                if (axios.isCancel(thrown)) {
-                    that.setState({
-                        data: {}
-                    })
-                } else {
-                    that.setState({
-                        error: thrown.message
-                    })
-                }
-            }).finally(function () {
-                that.setState({
-                    isRequestSended: false
-                })
-                that.source = CancelToken.source();
-            });
-    }
+        .then(res => res.data)
+        .then(function (data) {
+            var userInfo = data.results[0];
+            setServiceData({email: userInfo.email, data: JSON.stringify(data, null, 4)});
+        }).catch(function (thrown) {
+            if (axios.isCancel(thrown)) {
+                setServiceData({});
+            } else {
+                setResponseError(thrown.message);
+            }
+        }).finally(function () {
+            setIsRequestSended(false);
+            source = CancelToken.source();
+        });
+}
 
-    canceleRequest = () => {
-        if (this.state.isRequestSended) {
-            this.source.cancel('Operation canceled by the user.');
+    const canceleRequest = () => {
+        if (isRequestSended) {
+            source.cancel('Operation canceled by the user.');
         } else {
-            this.setState({
-                isRequestSended: false,
-                error: '',
-                data: {}
-            });
+            setResponseError('');
+            setIsRequestSended(false);
+            setServiceData({});
         }
     }
 
-    render() {
-        const { isRequestSended, data, error } = this.state;
-        return (
-            <>
-                <MainContainer
-                    text={data.email}
-                    cancelHandler={this.canceleRequest}
-                    requestHandler={this.getUser}
-                    isRequestSended={isRequestSended} />
-                <ModalWindow
-                    text={error}
-                    closeModalHandler={this.canceleRequest}
-                    resendHandler={this.getUser} />
-            </>
-        );
-    }
+    return (
+        <>
+            <MainContainer
+                text={serviceData.email}
+                cancelHandler={canceleRequest}
+                requestHandler={getUser}
+                isRequestSended={isRequestSended} />
+            <ModalWindow
+                text={responseError}
+                closeModalHandler={canceleRequest}
+                resendHandler={getUser} />
+            <Response>
+                <Container>
+                    <Alert>{serviceData.data}</Alert>                
+                </Container>
+            </Response>
+        </>
+    );
 }
 
 export default App;
