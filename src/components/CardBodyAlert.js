@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, Alert } from 'react-bootstrap';
+import {connect} from 'react-redux';
 
 const CardBodyAlert = props => {
     const {text} = props
@@ -14,4 +15,13 @@ const CardBodyAlert = props => {
     );
 }
 
-export default CardBodyAlert;
+
+function mapStateToProps(store) {
+    const { serviceData } = store;
+
+    return {
+        text: serviceData.email
+    }
+}
+
+export default connect(mapStateToProps)(CardBodyAlert);

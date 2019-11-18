@@ -1,14 +1,12 @@
-import React, {Suspense, useState} from 'react';
+import React, {Suspense} from 'react';
+import {connect} from 'react-redux';
 import { Card, Row, Col, Container, ToggleButtonGroup, ToggleButton } from 'react-bootstrap';
 import CardBody from './CardBody';
 
-import {Size} from '../components/Size';
-import Outlined from '../components/Outlined';
+import {setBtnSize, setBtnOutline} from '../actions/actions';
 
 const MainContainer = props => {
-    const {text, cancelHandler, requestHandler, isRequestSended} = props;
-    const [btnSize, setBtnSize] = useState('sm');
-    const [btnOutline, setBtnOutline] = useState('');
+    const {btnSize, btnOutline, setBtnOutline, setBtnSize} = props;
 
     const CardBodyAlert = React.lazy(() => import('../components/CardBodyAlert'));
 
@@ -19,26 +17,18 @@ const MainContainer = props => {
                     <Card>
                         <Card.Header>Featured</Card.Header>
                         <ToggleButtonGroup type="radio" defaultValue={btnSize} name="sizeSwitcher" onChange={setBtnSize}>
-                            <ToggleButton variant="secondary" value={'sm'}>Set small buttons by HOC</ToggleButton>
-                            <ToggleButton variant="secondary" value={'lg'}>Set big buttons by HOC</ToggleButton>
+                            <ToggleButton variant="secondary" value={'sm'}>Set small buttons</ToggleButton>
+                            <ToggleButton variant="secondary" value={'lg'}>Set big buttons</ToggleButton>
                         </ToggleButtonGroup>
                         <ToggleButtonGroup type="radio" defaultValue={btnOutline} name="outlinedSwitcher" onChange={setBtnOutline}>
-                            <ToggleButton variant="outline-secondary" value={'outline-'}>set outline by hook useContext</ToggleButton>
-                            <ToggleButton variant="outline-secondary" value={''}>delete outline by hook useContext</ToggleButton>
+                            <ToggleButton variant="outline-secondary" value={'outline-'}>Set outline</ToggleButton>
+                            <ToggleButton variant="outline-secondary" value={''}>Delete outline</ToggleButton>
                         </ToggleButtonGroup>
                         
-                        <Outlined.Provider value={btnOutline}>
-                            <Size.Provider value={btnSize}>
-                                <CardBody 
-                                    text={text} 
-                                    cancelHandler={cancelHandler} 
-                                    requestHandler={requestHandler} 
-                                    isRequestSended={isRequestSended} />
-                            </Size.Provider>
-                        </Outlined.Provider>
+                        <CardBody />
 
                         <Suspense fallback="">
-                            <CardBodyAlert text={text} />
+                            <CardBodyAlert />
                         </Suspense>
 
                     </Card>
@@ -48,4 +38,18 @@ const MainContainer = props => {
     );
 }
 
-export default MainContainer;
+function mapStateToProps(store) {
+    const { btnSize, btnOutline } = store;
+
+    return {
+        btnSize,
+        btnOutline
+    }
+}
+
+const mapDispatchToProps = {
+    setBtnSize,
+    setBtnOutline
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(MainContainer);

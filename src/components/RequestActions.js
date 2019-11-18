@@ -1,25 +1,40 @@
-import React, {useContext, useRef, useEffect} from 'react';
-import { Button} from 'react-bootstrap';
-import {withSize} from '../components/Size';
-import Outlined from '../components/Outlined'
+import React, {useRef, useEffect} from 'react';
+import {Button} from 'react-bootstrap';
+import {connect} from 'react-redux';
+import {cancelRequest, fetchUserData} from '../actions/actions';
 
 const RequestActions = (props) => {
-    const outlined = useContext(Outlined);
     const cancelBtn = useRef(null);
-    const {requestHandler, size, isRequestSended, cancelHandler} = props;
+    const {requestHandler, btnSize, btnOutline, requestIsSended, cancelHandler, source} = props;
 
     useEffect(() => {
-        if(isRequestSended) {
+        if(requestIsSended) {
             cancelBtn.current.focus();
         }
-    }, [isRequestSended]);
+    }, [requestIsSended]);
 
     return (
         <>
-            <Button onClick={requestHandler} variant={outlined + "primary"} size={size} block disabled={isRequestSended}>Get Email</Button>
-            <Button onClick={cancelHandler} ref={cancelBtn} variant={outlined + "danger"} size={size} block disabled={!isRequestSended}>Cancel request</Button>
+            <Button onClick={requestHandler.bind(null, source)} variant={btnOutline + "primary"} size={btnSize} block disabled={requestIsSended}>Get Email</Button>
+            <Button onClick={cancelHandler.bind(null, source)} ref={cancelBtn} variant={btnOutline + "danger"} size={btnSize} block disabled={!requestIsSended}>Cancel request</Button>
         </>
     );
 }
 
-export default withSize(RequestActions);
+function mapStateToProps(store) {
+    const { btnSize, btnOutline, requestIsSended, source } = store;
+
+    return {
+        btnSize,
+        btnOutline,
+        requestIsSended,
+        source
+    }
+}
+
+const mapDispatchToProps = {
+    cancelHandler: cancelRequest,
+    requestHandler: fetchUserData
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(RequestActions);
