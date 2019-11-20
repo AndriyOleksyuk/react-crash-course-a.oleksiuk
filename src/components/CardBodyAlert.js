@@ -17,10 +17,10 @@ const CardBodyAlert = props => {
 
 
 function mapStateToProps(store) {
-    const { serviceData } = store;
+    const { serviceData } = store.request;
 
     return {
-        text: serviceData.email
+        text: serviceData ? serviceData.email : ''
     }
 }
 

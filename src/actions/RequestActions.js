@@ -1,15 +1,18 @@
 import axios from 'axios';
-import types from './types';
+import types from './Types';
 
-export const cancelRequest = (source) => (dispatch) => {
-    source.cancel('Operation canceled by the user.');
-
+export const cancelRequest = () => (dispatch, getState) => {
+    let { source } = getState().request;
     const CancelToken = axios.CancelToken;
+
+    source.cancel('Operation canceled by the user.');
+   
     source = CancelToken.source();
     dispatch(setCancelSource(source));
 }
 
-export const fetchUserData = (source) => (dispatch) => {
+export const fetchUserData = () => (dispatch, getState) => {
+    let { source } = getState().request;
     const URL = 'https://randomuser.me/api/';
     const cancelToken = source.token;
 
@@ -33,5 +36,3 @@ export const setCancelSource = (source) => ({ type: types.SET_CANCEL_TOKEN, sour
 export const startFetchUserData = () => ({ type: types.START_FETCH_DATA});
 export const finishFetchUserData = (response) => ({ type: types.FINISH_FETCH_DATA, response});
 export const handleError = (error) => ({ type: types.HANDLE_ERROR, error});
-export const setBtnSize = (size) => ({type: types.SET_BUTTONS_SIZE, size});
-export const setBtnOutline = (outlineValue) => ({type: types.SET_BUTTONS_OUTLINE, outlineValue});

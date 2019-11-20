@@ -1,11 +1,11 @@
 import React, {useRef, useEffect} from 'react';
 import {Button} from 'react-bootstrap';
 import {connect} from 'react-redux';
-import {cancelRequest, fetchUserData} from '../actions/actions';
+import {cancelRequest, fetchUserData} from '../actions/RequestActions';
 
 const RequestActions = (props) => {
     const cancelBtn = useRef(null);
-    const {requestHandler, btnSize, btnOutline, requestIsSended, cancelHandler, source} = props;
+    const {requestHandler, btnSize, btnOutline, requestIsSended, cancelHandler} = props;
 
     useEffect(() => {
         if(requestIsSended) {
@@ -15,20 +15,20 @@ const RequestActions = (props) => {
 
     return (
         <>
-            <Button onClick={requestHandler.bind(null, source)} variant={btnOutline + "primary"} size={btnSize} block disabled={requestIsSended}>Get Email</Button>
-            <Button onClick={cancelHandler.bind(null, source)} ref={cancelBtn} variant={btnOutline + "danger"} size={btnSize} block disabled={!requestIsSended}>Cancel request</Button>
+            <Button onClick={requestHandler} variant={btnOutline + "primary"} size={btnSize} block disabled={requestIsSended}>Get Email</Button>
+            <Button onClick={cancelHandler} ref={cancelBtn} variant={btnOutline + "danger"} size={btnSize} block disabled={!requestIsSended}>Cancel request</Button>
         </>
     );
 }
 
 function mapStateToProps(store) {
-    const { btnSize, btnOutline, requestIsSended, source } = store;
+    const { requestIsSended } = store.request;
+    const { btnSize, btnOutline } = store.theme;
 
     return {
         btnSize,
         btnOutline,
-        requestIsSended,
-        source
+        requestIsSended
     }
 }
 

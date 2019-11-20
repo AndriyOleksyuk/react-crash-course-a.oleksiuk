@@ -21,10 +21,10 @@ const App = props => {
 }
 
 function mapStateToProps(store) {
-    const { serviceData } = store;
+    const { serviceData } = store.request;
 
     return {
-        json: serviceData.data
+        json: serviceData ? serviceData.data : []
     }
 }
 

@@ -3,11 +3,15 @@ const CancelToken = axios.CancelToken;
 const source = CancelToken.source();    
 
 const state = {
-    error: '',
-    requestIsSended: false,
-    serviceData: {},
-    btnOutline: '',
-    btnSize: 'sm',
-    source: source
+    request: {
+        error: '',
+        requestIsSended: false,
+        serviceData: null,
+        source: source
+    },
+    theme: {
+        btnSize: 'sm',
+        btnOutline: ''
+    }
 };
 export default state;

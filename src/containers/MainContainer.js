@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import { Card, Row, Col, Container, ToggleButtonGroup, ToggleButton } from 'react-bootstrap';
 import CardBody from './CardBody';
 
-import {setBtnSize, setBtnOutline} from '../actions/actions';
+import {setBtnSize, setBtnOutline} from '../actions/ThemeActions';
 
 const MainContainer = props => {
     const {btnSize, btnOutline, setBtnOutline, setBtnSize} = props;
@@ -39,7 +39,7 @@ const MainContainer = props => {
 }
 
 function mapStateToProps(store) {
-    const { btnSize, btnOutline } = store;
+    const { btnSize, btnOutline } = store.theme;
 
     return {
         btnSize,

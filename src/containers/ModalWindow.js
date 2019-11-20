@@ -1,12 +1,12 @@
 import React from 'react';
 import { Button, Modal } from 'react-bootstrap';
 import {connect} from 'react-redux';
-import {fetchUserData, cancelRequest} from '../actions/actions';
+import {fetchUserData, cancelRequest} from '../actions/RequestActions';
 
 const ModalWindow = props => {
-    const {error, resendHandler, closeModalHandler, source} = props;
+    const {error, resendHandler, closeModalHandler} = props;
     return (
-        <Modal show={!!error} onHide={closeModalHandler.bind(null, source)}>
+        <Modal show={!!error} onHide={closeModalHandler}>
             <Modal.Header>
                 <Modal.Title>Request failed</Modal.Title>
             </Modal.Header>
@@ -16,7 +16,7 @@ const ModalWindow = props => {
             </Modal.Body>
 
             <Modal.Footer>
-                <Button onClick={resendHandler.bind(null, source)} variant="secondary">Resend</Button>
+                <Button onClick={resendHandler} variant="secondary">Resend</Button>
             </Modal.Footer>
         </Modal>
     );
@@ -24,11 +24,9 @@ const ModalWindow = props => {
 
 
 function mapStateToProps(store) {
-    const {error, source } = store;
-
+    const { error } = store.request;
     return {
-        error,
-        source
+        error: error
     }
 }
 
