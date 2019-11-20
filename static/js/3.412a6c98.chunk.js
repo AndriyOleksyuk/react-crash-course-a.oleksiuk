@@ -1,2 +1,0 @@
-(this["webpackJsonpreact-crash-course-a.oleksiuk"]=this["webpackJsonpreact-crash-course-a.oleksiuk"]||[]).push([[3],{113:function(e,a,t){"use strict";t.r(a);var s=t(0),c=t.n(s),r=t(111),n=t(109);a.default=function(e){var a=e.text;return c.a.createElement(r.a.Body,null,a&&c.a.createElement(n.a,{variant:"success"},"Email: ",a))}}}]);
-//# sourceMappingURL=3.412a6c98.chunk.js.map
