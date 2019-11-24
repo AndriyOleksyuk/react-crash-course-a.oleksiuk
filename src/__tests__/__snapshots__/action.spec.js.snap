@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`actions should set btn size 1`] = `
+Object {
+  "size": "sm",
+  "type": "SET_BUTTONS_SIZE",
+}
+`;
+
+exports[`actions should set delete outline 1`] = `
+Object {
+  "outlineValue": "",
+  "type": "SET_BUTTONS_OUTLINE",
+}
+`;
+
+exports[`actions should set outline 1`] = `
+Object {
+  "outlineValue": "outline-",
+  "type": "SET_BUTTONS_OUTLINE",
+}
+`;
