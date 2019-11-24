@@ -13,7 +13,7 @@ const App = props => {
             <ModalWindow />
             <Response>
                 <Container>
-                    <Alert>{props.json}</Alert>
+                    <Alert>{props.serviceData && props.serviceData.data}</Alert>
                 </Container>
             </Response>
         </>
@@ -21,10 +21,8 @@ const App = props => {
 }
 
 function mapStateToProps(store) {
-    const { serviceData } = store.request;
-
     return {
-        json: serviceData ? serviceData.data : []
+        serviceData: store.request.serviceData
     }
 }
 

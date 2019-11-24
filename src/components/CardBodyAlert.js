@@ -3,12 +3,12 @@ import { Card, Alert } from 'react-bootstrap';
 import {connect} from 'react-redux';
 
 const CardBodyAlert = props => {
-    const {text} = props
+    const {serviceData} = props
     return (
         <Card.Body>
-            {text &&
+            {serviceData && serviceData.error &&
                 <Alert variant="success">
-                    Email: {text}
+                    Email: {serviceData.error}
                 </Alert>
             }
         </Card.Body>
@@ -17,10 +17,8 @@ const CardBodyAlert = props => {
 
 
 function mapStateToProps(store) {
-    const { serviceData } = store.request;
-
     return {
-        text: serviceData ? serviceData.email : ''
+        serviceData: store.request.serviceData
     }
 }
 
