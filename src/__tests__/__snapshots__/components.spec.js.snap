@@ -83,7 +83,7 @@ exports[`<MainContainer /> MainContainer should render and match snapshot 1`] = 
             <div
               class="card-title h5"
             >
-              First lesson
+              Fourth lesson
             </div>
             <button
               class="btn btn-primary btn-block btn-sm"
@@ -216,7 +216,7 @@ exports[`ModalWindow after success axios call Should match snapshot 1`] = `
             <div
               class="card-title h5"
             >
-              First lesson
+              Fourth lesson
             </div>
             <button
               class="btn btn-primary btn-block btn-sm"
