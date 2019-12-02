@@ -18,7 +18,7 @@ export const fetchUserData = () => (dispatch, getState) => {
 
     dispatch(startFetchUserData());
 
-    axios.get(URL, {cancelToken})
+    return axios.get(URL, {cancelToken})
         .then(res => res.data)
         .then(function (data) {
             var userInfo = data.results[0];            
