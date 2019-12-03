@@ -6,9 +6,9 @@ const CardBodyAlert = props => {
     const {serviceData} = props
     return (
         <Card.Body>
-            {serviceData && serviceData.error &&
+            {serviceData && serviceData.email &&
                 <Alert variant="success">
-                    Email: {serviceData.error}
+                    Email: {serviceData.email}
                 </Alert>
             }
         </Card.Body>

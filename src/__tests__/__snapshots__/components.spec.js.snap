@@ -1,0 +1,251 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MainContainer /> MainContainer should render and match snapshot 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <div
+      class="show-grid row"
+      float="center"
+    >
+      <div
+        class="col-12"
+        xsoffset="6"
+      >
+        <div
+          class="card"
+        >
+          <div
+            class="card-header"
+          >
+            Featured
+          </div>
+          <div
+            class="btn-group btn-group-toggle"
+            role="group"
+          >
+            <label
+              class="btn active btn-secondary"
+            >
+              <input
+                autocomplete="off"
+                checked=""
+                name="sizeSwitcher"
+                type="radio"
+                value="sm"
+              />
+              Set small buttons
+            </label>
+            <label
+              class="btn btn-secondary"
+            >
+              <input
+                autocomplete="off"
+                name="sizeSwitcher"
+                type="radio"
+                value="lg"
+              />
+              Set big buttons
+            </label>
+          </div>
+          <div
+            class="btn-group btn-group-toggle"
+            role="group"
+          >
+            <label
+              class="btn btn-outline-secondary"
+            >
+              <input
+                autocomplete="off"
+                name="outlinedSwitcher"
+                type="radio"
+                value="outline-"
+              />
+              Set outline
+            </label>
+            <label
+              class="btn active btn-outline-secondary"
+            >
+              <input
+                autocomplete="off"
+                checked=""
+                name="outlinedSwitcher"
+                type="radio"
+                value=""
+              />
+              Delete outline
+            </label>
+          </div>
+          <div
+            class="card-body"
+          >
+            <div
+              class="card-title h5"
+            >
+              Fourth lesson
+            </div>
+            <button
+              class="btn btn-primary btn-block btn-sm"
+              type="button"
+            >
+              Get Email
+            </button>
+            <button
+              class="btn btn-danger btn-block btn-sm"
+              disabled=""
+              type="button"
+            >
+              Cancel request
+            </button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ModalWindow /> ModalWindow should render and match snapshot 1`] = `<div />`;
+
+exports[`<RequestActions /> RequestActions should render and match snapshot 1`] = `
+<div>
+  <button
+    class="btn btn-primary btn-block btn-sm"
+    type="button"
+  >
+    Get Email
+  </button>
+  <button
+    class="btn btn-danger btn-block btn-sm"
+    disabled=""
+    type="button"
+  >
+    Cancel request
+  </button>
+</div>
+`;
+
+exports[`ModalWindow after failed axios call Should match snapshot 1`] = `
+<div
+  aria-hidden="true"
+/>
+`;
+
+exports[`ModalWindow after success axios call Should match snapshot 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <div
+      class="show-grid row"
+      float="center"
+    >
+      <div
+        class="col-12"
+        xsoffset="6"
+      >
+        <div
+          class="card"
+        >
+          <div
+            class="card-header"
+          >
+            Featured
+          </div>
+          <div
+            class="btn-group btn-group-toggle"
+            role="group"
+          >
+            <label
+              class="btn active btn-secondary"
+            >
+              <input
+                autocomplete="off"
+                checked=""
+                name="sizeSwitcher"
+                type="radio"
+                value="sm"
+              />
+              Set small buttons
+            </label>
+            <label
+              class="btn btn-secondary"
+            >
+              <input
+                autocomplete="off"
+                name="sizeSwitcher"
+                type="radio"
+                value="lg"
+              />
+              Set big buttons
+            </label>
+          </div>
+          <div
+            class="btn-group btn-group-toggle"
+            role="group"
+          >
+            <label
+              class="btn btn-outline-secondary"
+            >
+              <input
+                autocomplete="off"
+                name="outlinedSwitcher"
+                type="radio"
+                value="outline-"
+              />
+              Set outline
+            </label>
+            <label
+              class="btn active btn-outline-secondary"
+            >
+              <input
+                autocomplete="off"
+                checked=""
+                name="outlinedSwitcher"
+                type="radio"
+                value=""
+              />
+              Delete outline
+            </label>
+          </div>
+          <div
+            class="card-body"
+          >
+            <div
+              class="card-title h5"
+            >
+              Fourth lesson
+            </div>
+            <button
+              class="btn btn-primary btn-block btn-sm"
+              type="button"
+            >
+              Get Email
+            </button>
+            <button
+              class="btn btn-danger btn-block btn-sm"
+              disabled=""
+              type="button"
+            >
+              Cancel request
+            </button>
+          </div>
+          <div
+            class="card-body"
+          >
+            <div
+              class="fade alert alert-success show"
+              role="alert"
+            >
+              Email: 
+              lucia.vandepavert@example.com
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
