@@ -1,17 +1,25 @@
 import React from 'react';
 import { Card, Alert } from 'react-bootstrap';
+import {connect} from 'react-redux';
 
 const CardBodyAlert = props => {
-    const {text} = props
+    const {serviceData} = props
     return (
         <Card.Body>
-            {text &&
+            {serviceData && serviceData.error &&
                 <Alert variant="success">
-                    Email: {text}
+                    Email: {serviceData.error}
                 </Alert>
             }
         </Card.Body>
     );
 }
 
-export default CardBodyAlert;
+
+function mapStateToProps(store) {
+    return {
+        serviceData: store.request.serviceData
+    }
+}
+
+export default connect(mapStateToProps)(CardBodyAlert);
