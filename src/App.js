@@ -1,26 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import ModalWindow from './containers/ModalWindow';
+import MainContainer from './containers/MainContainer';
+import Response from './components/Response';
+import {connect} from 'react-redux';
+import { Alert, Container } from 'react-bootstrap';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = props => {
+
+    return (
+        <>
+            <MainContainer />
+            <ModalWindow />
+            <Response>
+                <Container>
+                    <Alert>{props.serviceData && props.serviceData.data}</Alert>
+                </Container>
+            </Response>
+        </>
+    );
 }
 
-export default App;
+function mapStateToProps(store) {
+    return {
+        serviceData: store.request.serviceData
+    }
+}
+
+export default connect(mapStateToProps)(App);
