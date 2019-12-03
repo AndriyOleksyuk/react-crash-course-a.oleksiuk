@@ -1,0 +1,2 @@
+(this["webpackJsonpreact-crash-course-a.oleksiuk"]=this["webpackJsonpreact-crash-course-a.oleksiuk"]||[]).push([[3],{126:function(e,a,t){"use strict";t.r(a);var r=t(0),c=t.n(r),s=t(125),i=t(122),n=t(12);a.default=Object(n.b)((function(e){return{serviceData:e.request.serviceData}}))((function(e){var a=e.serviceData;return c.a.createElement(s.a.Body,null,a&&a.email&&c.a.createElement(i.a,{variant:"success"},"Email: ",a.email))}))}}]);
+//# sourceMappingURL=3.29752b1f.chunk.js.map

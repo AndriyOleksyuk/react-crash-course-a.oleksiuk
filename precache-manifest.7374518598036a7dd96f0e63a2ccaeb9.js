@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6cec5e50ec60dc4b06523e737e449cc8",
+    "revision": "bd741dc485232041e615485cb46435c9",
     "url": "/react-crash-course-a.oleksiuk/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-crash-course-a.oleksiuk/static/css/2.510409cd.chunk.css"
   },
   {
-    "revision": "47b94a6f3f5eb84ff81b",
+    "revision": "870c5236ea54c5b3eb32",
     "url": "/react-crash-course-a.oleksiuk/static/css/main.498d002a.chunk.css"
   },
   {
@@ -16,15 +16,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-crash-course-a.oleksiuk/static/js/2.a5f66310.chunk.js"
   },
   {
-    "revision": "be7a92c2db9fcb5291a3",
-    "url": "/react-crash-course-a.oleksiuk/static/js/3.5be8ab63.chunk.js"
+    "revision": "2207497041dbeb67bded",
+    "url": "/react-crash-course-a.oleksiuk/static/js/3.29752b1f.chunk.js"
   },
   {
-    "revision": "47b94a6f3f5eb84ff81b",
-    "url": "/react-crash-course-a.oleksiuk/static/js/main.f0b006b5.chunk.js"
+    "revision": "870c5236ea54c5b3eb32",
+    "url": "/react-crash-course-a.oleksiuk/static/js/main.8897e3f7.chunk.js"
   },
   {
-    "revision": "a589fed8eff5ad8dbbe1",
-    "url": "/react-crash-course-a.oleksiuk/static/js/runtime-main.56dfa7e1.js"
+    "revision": "53bb8e4f94840b271bfe",
+    "url": "/react-crash-course-a.oleksiuk/static/js/runtime-main.85562779.js"
   }
 ]);
