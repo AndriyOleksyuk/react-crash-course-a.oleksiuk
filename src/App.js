@@ -3,7 +3,7 @@ import ModalWindow from './containers/ModalWindow';
 import MainContainer from './containers/MainContainer';
 import Response from './components/Response';
 import {connect} from 'react-redux';
-import { Alert, Container } from 'react-bootstrap';
+import { Alert, Container } from "react-bootstrap";
 
 const App = props => {
 
