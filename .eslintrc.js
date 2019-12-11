@@ -1,5 +1,5 @@
 module.exports = {
-    "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:prettier/recommended", "prettier/react",],
+    "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:prettier/recommended", "prettier/react"],
     "parser": "babel-eslint",
     "env": {
         "browser": true,
@@ -11,7 +11,7 @@ module.exports = {
     },
     "settings": {
         "react": {
-            "version": "detect"
+            "version": "16.11.0"
         }
     }
 }
