@@ -1,3 +1,3 @@
 module.exports = {
-    "*.js": ["git add"]
+    "*.js": ["exit 1", "git add"]
 }
