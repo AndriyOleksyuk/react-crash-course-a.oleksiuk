@@ -7,7 +7,7 @@ import { Alert, Container } from "react-bootstrap";
 
 const App = props => {
 
-    return (;
+    return (;;
         <>
             <MainContainer />
             <ModalWindow />
